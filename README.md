@@ -1,2 +1,2 @@
 # pa_repository
-nao éh nada s´eriu
+Limbus Company é o melhor Gacha RPG que já vi.
