@@ -1,0 +1,44 @@
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 48
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> describe produto
+    -> ;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> describe produto
+    -> ;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use produtos
+Database changed
+MariaDB [produtos]> describe produto
+    -> ;
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| idproduto    | int(11)       | NO   | PRI | NULL    | auto_increment |
+| idcategoria  | int(11)       | YES  | MUL | NULL    |                |
+| nomeproduto  | varchar(100)  | NO   |     | NULL    |                |
+| preco        | decimal(10,2) | NO   |     | NULL    |                |
+| qtde         | int(11)       | NO   |     | NULL    |                |
+| datacadastro | date          | NO   |     | NULL    |                |
+| ativo        | bit(1)        | NO   |     | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.090 sec)
+
+MariaDB [produtos]> describe categoria
+    -> ;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| idcategoria | int(11)      | NO   | PRI | NULL    | auto_increment |
+| categoria   | varchar(100) | NO   |     | NULL    |                |
+| descricao   | varchar(255) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+3 rows in set (0.030 sec)
+
